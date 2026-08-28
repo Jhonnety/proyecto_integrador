@@ -1,0 +1,281 @@
+{
+  "nombre_modelo": "Hist. Gradient Boosting — Saber 11 desempeño alto",
+  "version": "1.0.0",
+  "fecha_entrenamiento": "2026-08-25 19:48",
+  "fuente_datos": "Datos Abiertos Colombia — datos.gov.co — recurso kgxf-xxbe",
+  "periodo": "20224",
+  "objetivo": "desempeno_alto = punt_global >= 300",
+  "umbral_puntaje": 300,
+  "umbral_probabilidad_recomendado": 0.546,
+  "predictores": [
+    "fami_estratovivienda",
+    "fami_cuartoshogar",
+    "fami_personashogar",
+    "fami_educacionmadre",
+    "fami_educacionpadre",
+    "fami_tieneautomovil",
+    "fami_tienecomputador",
+    "fami_tieneinternet",
+    "fami_tienelavadora",
+    "cole_bilingue",
+    "cole_sede_principal",
+    "cole_naturaleza",
+    "cole_area_ubicacion",
+    "estu_genero",
+    "estu_privado_libertad",
+    "cole_calendario",
+    "cole_caracter",
+    "cole_jornada",
+    "cole_genero",
+    "cole_depto_ubicacion",
+    "edad",
+    "indice_bienes",
+    "es_extranjero",
+    "cole_bilingue_faltante",
+    "fami_estratovivienda_faltante",
+    "fami_educacionmadre_faltante",
+    "fami_educacionpadre_faltante",
+    "fami_tieneinternet_faltante",
+    "fami_tienecomputador_faltante",
+    "fami_cuartoshogar_faltante",
+    "fami_personashogar_faltante"
+  ],
+  "columnas_float": [
+    "fami_tieneautomovil",
+    "fami_tienecomputador",
+    "fami_tieneinternet",
+    "fami_tienelavadora",
+    "cole_bilingue",
+    "cole_sede_principal",
+    "cole_naturaleza",
+    "cole_area_ubicacion",
+    "estu_genero",
+    "estu_privado_libertad",
+    "edad",
+    "indice_bienes",
+    "es_extranjero",
+    "cole_bilingue_faltante",
+    "fami_estratovivienda_faltante",
+    "fami_educacionmadre_faltante",
+    "fami_educacionpadre_faltante",
+    "fami_tieneinternet_faltante",
+    "fami_tienecomputador_faltante",
+    "fami_cuartoshogar_faltante",
+    "fami_personashogar_faltante"
+  ],
+  "predictores_formulario": [
+    "fami_estratovivienda",
+    "fami_cuartoshogar",
+    "fami_personashogar",
+    "fami_educacionmadre",
+    "fami_educacionpadre",
+    "fami_tieneautomovil",
+    "fami_tienecomputador",
+    "fami_tieneinternet",
+    "fami_tienelavadora",
+    "cole_bilingue",
+    "cole_sede_principal",
+    "cole_naturaleza",
+    "cole_area_ubicacion",
+    "estu_genero",
+    "estu_privado_libertad",
+    "cole_calendario",
+    "cole_caracter",
+    "cole_jornada",
+    "cole_genero",
+    "cole_depto_ubicacion",
+    "edad",
+    "indice_bienes",
+    "es_extranjero"
+  ],
+  "indicadores_ausencia": [
+    "cole_bilingue_faltante",
+    "fami_estratovivienda_faltante",
+    "fami_educacionmadre_faltante",
+    "fami_educacionpadre_faltante",
+    "fami_tieneinternet_faltante",
+    "fami_tienecomputador_faltante",
+    "fami_cuartoshogar_faltante",
+    "fami_personashogar_faltante"
+  ],
+  "categorias_ordinales": {
+    "fami_estratovivienda": [
+      "Sin Estrato",
+      "Estrato 1",
+      "Estrato 2",
+      "Estrato 3",
+      "Estrato 4",
+      "Estrato 5",
+      "Estrato 6"
+    ],
+    "fami_cuartoshogar": [
+      "Uno",
+      "Dos",
+      "Tres",
+      "Cuatro",
+      "Cinco",
+      "Seis o mas"
+    ],
+    "fami_personashogar": [
+      "1 a 2",
+      "3 a 4",
+      "5 a 6",
+      "7 a 8",
+      "9 o más"
+    ],
+    "fami_educacionmadre": [
+      "Ninguno",
+      "Primaria incompleta",
+      "Primaria completa",
+      "Secundaria (Bachillerato) incompleta",
+      "Secundaria (Bachillerato) completa",
+      "Técnica o tecnológica incompleta",
+      "Técnica o tecnológica completa",
+      "Educación profesional incompleta",
+      "Educación profesional completa",
+      "Postgrado"
+    ],
+    "fami_educacionpadre": [
+      "Ninguno",
+      "Primaria incompleta",
+      "Primaria completa",
+      "Secundaria (Bachillerato) incompleta",
+      "Secundaria (Bachillerato) completa",
+      "Técnica o tecnológica incompleta",
+      "Técnica o tecnológica completa",
+      "Educación profesional incompleta",
+      "Educación profesional completa",
+      "Postgrado"
+    ]
+  },
+  "variables_binarias": {
+    "fami_tieneautomovil": {
+      "No": 0,
+      "Si": 1
+    },
+    "fami_tienecomputador": {
+      "No": 0,
+      "Si": 1
+    },
+    "fami_tieneinternet": {
+      "No": 0,
+      "Si": 1
+    },
+    "fami_tienelavadora": {
+      "No": 0,
+      "Si": 1
+    },
+    "cole_bilingue": {
+      "N": 0,
+      "S": 1
+    },
+    "cole_sede_principal": {
+      "N": 0,
+      "S": 1
+    },
+    "cole_naturaleza": {
+      "OFICIAL": 0,
+      "NO OFICIAL": 1
+    },
+    "cole_area_ubicacion": {
+      "RURAL": 0,
+      "URBANO": 1
+    },
+    "estu_genero": {
+      "M": 0,
+      "F": 1
+    },
+    "estu_privado_libertad": {
+      "N": 0,
+      "S": 1
+    }
+  },
+  "variables_nominales": {
+    "cole_calendario": [
+      "A",
+      "B",
+      "OTRO"
+    ],
+    "cole_caracter": [
+      "ACADÉMICO",
+      "NO APLICA",
+      "TÉCNICO",
+      "TÉCNICO/ACADÉMICO"
+    ],
+    "cole_jornada": [
+      "COMPLETA",
+      "MAÑANA",
+      "NOCHE",
+      "SABATINA",
+      "TARDE",
+      "UNICA"
+    ],
+    "cole_genero": [
+      "FEMENINO",
+      "MASCULINO",
+      "MIXTO"
+    ],
+    "cole_depto_ubicacion": [
+      "AMAZONAS",
+      "ANTIOQUIA",
+      "ARAUCA",
+      "ATLANTICO",
+      "BOGOTÁ",
+      "BOLIVAR",
+      "BOYACA",
+      "CALDAS",
+      "CAQUETA",
+      "CASANARE",
+      "CAUCA",
+      "CESAR",
+      "CHOCO",
+      "CORDOBA",
+      "CUNDINAMARCA",
+      "GUAINIA",
+      "GUAVIARE",
+      "HUILA",
+      "LA GUAJIRA",
+      "MAGDALENA",
+      "META",
+      "NARIÑO",
+      "NORTE SANTANDER",
+      "PUTUMAYO",
+      "QUINDIO",
+      "RISARALDA",
+      "SAN ANDRES",
+      "SANTANDER",
+      "SUCRE",
+      "TOLIMA",
+      "VALLE",
+      "VAUPES",
+      "VICHADA"
+    ]
+  },
+  "hiperparametros": {
+    "class_weight": "balanced",
+    "l2_regularization": 1.0,
+    "max_depth": "6",
+    "max_iter": "300",
+    "random_state": "42"
+  },
+  "hiperparametros_busqueda_ajuste": {
+    "l2_regularization": 0.5503,
+    "learning_rate": 0.0326,
+    "max_depth": "11",
+    "max_iter": "215",
+    "max_leaf_nodes": "20",
+    "min_samples_leaf": "12"
+  },
+  "metricas_test": {
+    "Accuracy": 0.736,
+    "Precision": 0.4064,
+    "Recall": 0.7018,
+    "F1": 0.5147,
+    "ROC-AUC": 0.802,
+    "PR-AUC": 0.5209,
+    "Bal. Accuracy": 0.7231,
+    "MCC": 0.3753
+  },
+  "n_entrenamiento": 20000,
+  "semilla": 42
+}

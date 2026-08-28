@@ -1,0 +1,7 @@
+﻿Registro de prueba,Probabilidad de desempeño alto,Predicción (umbral 0.5),Predicción (umbral 0.55),Prioridad de acompañamiento
+"P1 · Estrato bajo, colegio oficial rural, padres con primaria",0.0124,NO ALTO,NO ALTO,MUY ALTA
+"P2 · Estrato medio, colegio oficial urbano, padres bachilleres",0.4752,NO ALTO,NO ALTO,MEDIA
+"P3 · Estrato alto, colegio privado bilingüe calendario B",0.8236,ALTO,ALTO,BAJA
+"P4 · Estudiante en extraedad, jornada nocturna",0.0062,NO ALTO,NO ALTO,MUY ALTA
+"P5 · Estrato medio-alto, colegio técnico, buena dotación del hogar",0.7737,ALTO,ALTO,BAJA
+"P6 · Estudiante migrante, estrato bajo, colegio oficial",0.2473,NO ALTO,NO ALTO,ALTA

@@ -1,0 +1,12 @@
+# Entorno y cachés de Python
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+.venv/
+venv/
+
+# Archivos temporales de ejecución
+*.log
+
+# Utilidades locales de construcción (no forman parte de la entrega)
+herramientas/

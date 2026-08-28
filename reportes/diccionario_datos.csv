@@ -1,0 +1,42 @@
+﻿Variable,Descripcion,Tipo,Entrada/Salida,Observacion
+periodo,Periodo de aplicacion del examen (AAAAS),Categorica nominal,EXCLUIDA,Constante: la muestra es de un solo periodo (20224)
+estu_consecutivo,Identificador anonimizado unico del examinando,Texto (ID),EXCLUIDA,"Identificador; sin poder predictivo, solo se usa para detectar duplicados"
+cole_area_ubicacion,Zona donde se ubica la sede del colegio,Categorica nominal,ENTRADA,URBANO / RURAL
+cole_bilingue,Indica si el establecimiento es bilingue,Categorica binaria,ENTRADA,S / N. Alta tasa de nulos (~17%)
+cole_calendario,Calendario academico del establecimiento,Categorica nominal,ENTRADA,A / B / OTRO
+cole_caracter,Caracter academico del establecimiento,Categorica nominal,ENTRADA,ACADEMICO / TECNICO / TECNICO-ACADEMICO / NO APLICA
+cole_depto_ubicacion,Departamento donde se ubica el colegio,Categorica nominal,ENTRADA,"33 categorias; alta cardinalidad, se agrupa"
+cole_mcpio_ubicacion,Municipio donde se ubica el colegio,Categorica nominal,EXCLUIDA,925 categorias: cardinalidad excesiva; el departamento captura el efecto territorial
+cole_genero,Genero de la poblacion atendida por el colegio,Categorica nominal,ENTRADA,MIXTO / MASCULINO / FEMENINO
+cole_jornada,Jornada en la que el estudiante cursa,Categorica nominal,ENTRADA,MANANA / TARDE / COMPLETA / UNICA / NOCHE / SABATINA
+cole_naturaleza,Naturaleza juridica del establecimiento,Categorica binaria,ENTRADA,OFICIAL / NO OFICIAL
+cole_sede_principal,Indica si es la sede principal del establecimiento,Categorica binaria,ENTRADA,S / N
+estu_genero,Genero reportado por el estudiante,Categorica binaria,ENTRADA,F / M
+estu_fechanacimiento,Fecha de nacimiento (DD/MM/AAAA),Fecha,EXCLUIDA,Se transforma en la variable derivada 'edad'
+estu_nacionalidad,Pais de nacionalidad del estudiante,Categorica nominal,EXCLUIDA,Se resume en la variable derivada 'es_extranjero'
+estu_pais_reside,Pais de residencia del estudiante,Categorica nominal,EXCLUIDA,98.8% COLOMBIA: casi constante
+estu_depto_reside,Departamento de residencia del estudiante,Categorica nominal,EXCLUIDA,Redundante con cole_depto_ubicacion (coincide en >97% de los casos)
+estu_privado_libertad,Estudiante privado de la libertad,Categorica binaria,ENTRADA,S / N. Muy raro (0.07%) pero informativo
+estu_estadoinvestigacion,Estado del resultado tras control de validez,Categorica nominal,EXCLUIDA,Se usa como REGLA DE CALIDAD: solo se conservan registros 'PUBLICAR'
+estu_estudiante,Condicion del examinando,Categorica nominal,EXCLUIDA,Constante ('ESTUDIANTE') en el periodo analizado
+estu_tipodocumento,Tipo de documento de identidad,Categorica nominal,EXCLUIDA,Proxy administrativo de la edad (TI vs CC); se prefiere la edad explicita
+fami_cuartoshogar,Numero de cuartos del hogar,Categorica ordinal,ENTRADA,Uno < Dos < Tres < Cuatro < Cinco < Seis o mas
+fami_educacionmadre,Maximo nivel educativo de la madre,Categorica ordinal,ENTRADA,Ninguno ... Postgrado. Incluye 'No sabe'/'No Aplica' (nulos encubiertos)
+fami_educacionpadre,Maximo nivel educativo del padre,Categorica ordinal,ENTRADA,Ninguno ... Postgrado. Incluye 'No sabe'/'No Aplica' (nulos encubiertos)
+fami_estratovivienda,Estrato socioeconomico de la vivienda,Categorica ordinal,ENTRADA,"Sin Estrato, Estrato 1 ... Estrato 6"
+fami_personashogar,Numero de personas que componen el hogar,Categorica ordinal,ENTRADA,1 a 2 < 3 a 4 < 5 a 6 < 7 a 8 < 9 o mas
+fami_tieneautomovil,El hogar posee automovil,Categorica binaria,ENTRADA,Si / No
+fami_tienecomputador,El hogar posee computador,Categorica binaria,ENTRADA,Si / No
+fami_tieneinternet,El hogar posee conexion a internet,Categorica binaria,ENTRADA,Si / No
+fami_tienelavadora,El hogar posee lavadora,Categorica binaria,ENTRADA,Si / No
+desemp_ingles,Nivel de desempeno en ingles (MCER),Categorica ordinal,EXCLUIDA,"FUGA: se deriva de punt_ingles, componente del puntaje global"
+punt_ingles,Puntaje del area de Ingles (0-100),Numerica,EXCLUIDA,FUGA: componente del puntaje global
+punt_matematicas,Puntaje del area de Matematicas (0-100),Numerica,EXCLUIDA,FUGA: componente del puntaje global
+punt_sociales_ciudadanas,Puntaje de Sociales y Ciudadanas (0-100),Numerica,EXCLUIDA,FUGA: componente del puntaje global
+punt_c_naturales,Puntaje de Ciencias Naturales (0-100),Numerica,EXCLUIDA,FUGA: componente del puntaje global
+punt_lectura_critica,Puntaje de Lectura Critica (0-100),Numerica,EXCLUIDA,FUGA: componente del puntaje global
+punt_global,Puntaje global del examen (0-500),Numerica,SALIDA (origen),Se binariza en la variable objetivo 'desempeno_alto'
+edad,Edad en anios cumplidos al 1-nov-2022 (derivada de estu_fechanacimiento),Numerica,ENTRADA,"Rango valido definido en las reglas de calidad: [13, 30]"
+es_extranjero,1 si la nacionalidad reportada no es COLOMBIA,Categorica binaria,ENTRADA,Derivada de estu_nacionalidad
+indice_bienes,Numero de bienes del hogar (automovil + computador + internet + lavadora),Numerica ordinal 0-4,ENTRADA,Proxy compacto de capacidad economica del hogar
+desempeno_alto,1 si punt_global >= 300,Binaria,SALIDA,VARIABLE OBJETIVO del modelo

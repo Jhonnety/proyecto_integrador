@@ -1,0 +1,8 @@
+﻿Hiperparametro,Que controla,Rango probado,Valor por defecto,Valor final
+l2_regularization,Penalizacion Ridge sobre los valores de las hojas; las encoge hacia cero,"[0, 5]",0.0,0.55026
+learning_rate,Peso (shrinkage) con que se incorpora cada arbol nuevo; regula la velocidad de ajuste,"[0.01, 0.30] en escala logaritmica",0.1,0.03257
+max_depth,Profundidad de cada arbol = orden maximo de las interacciones representables,"[2, 10]",None (sin limite),11
+max_iter,Numero de arboles anadidos secuencialmente; cada uno corrige el residuo del conjunto anterior,"[100, 600]",100,215
+max_leaf_nodes,Hojas maximas por arbol; fija la complejidad efectiva de cada aprendiz debil,"[8, 64]",31,20
+min_samples_leaf,Minimo de observaciones por hoja; regularizador que evita reglas basadas en pocos casos,"[10, 200]",20,12
+class_weight,Reponderacion del costo del error por clase; corrige el desbalance,"fijo en 'balanced' (decision de diseno, no se busca)",None,balanced
