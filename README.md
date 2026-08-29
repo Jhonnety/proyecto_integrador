@@ -5,7 +5,7 @@ Maestría en Ciencia de Datos · Aprendizaje de Máquina
 
 **Autor:** Jhon Esteban Velásquez Gómez
 
-**Aplicación en línea:** https://saber11-desempeno-alto.streamlit.app
+**Aplicación en línea:** https://proyectointegrador-uwjvxhrlyvwpueji8hmttm.streamlit.app
 **Cuaderno en Google Colab:** https://drive.google.com/file/d/17KIx0GmgRSfeUUAnehJXV9F9PHaPhVFF/view?usp=sharing
 **Repositorio:** https://github.com/Jhonnety/proyecto_integrador
 
@@ -81,7 +81,7 @@ cd app && streamlit run app.py
 
 La aplicación está desplegada en Streamlit Community Cloud:
 
-**https://saber11-desempeno-alto.streamlit.app**
+**https://proyectointegrador-uwjvxhrlyvwpueji8hmttm.streamlit.app**
 
 Para replicar el despliegue: entrar en https://share.streamlit.io, iniciar sesión con la
 cuenta de GitHub, pulsar **New app**, seleccionar este repositorio e indicar `app/app.py`
