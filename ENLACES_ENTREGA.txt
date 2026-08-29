@@ -1,0 +1,91 @@
+================================================================================
+PROYECTO INTEGRADOR - METODOLOGIA CRISP-DM
+Prediccion del desempeno alto en las Pruebas Saber 11
+================================================================================
+
+Autor      : Jhon Esteban Velasquez Gomez
+Asignatura : Aprendizaje de Maquina - Maestria en Ciencia de Datos
+Tipo       : Clasificacion binaria (supervisado)
+
+
+--------------------------------------------------------------------------------
+ENLACES PRINCIPALES
+--------------------------------------------------------------------------------
+
+APLICACION WEB (Streamlit Community Cloud)
+https://proyectointegrador-uwjvxhrlyvwpueji8hmttm.streamlit.app
+
+REPOSITORIO GITHUB
+https://github.com/Jhonnety/proyecto_integrador
+
+CUADERNO EN GOOGLE COLAB
+https://drive.google.com/file/d/17KIx0GmgRSfeUUAnehJXV9F9PHaPhVFF/view?usp=sharing
+
+
+--------------------------------------------------------------------------------
+FUENTE DE LOS DATOS
+--------------------------------------------------------------------------------
+
+Portal      : Datos Abiertos Colombia (www.datos.gov.co)
+Conjunto    : Resultados unicos Saber 11
+Entidad     : Instituto Colombiano para la Evaluacion de la Educacion - ICFES
+Id Socrata  : kgxf-xxbe
+Periodo     : 20224
+
+Pagina del conjunto de datos
+https://www.datos.gov.co/Educaci-n/Resultados-nicos-Saber-11/kgxf-xxbe
+
+API de descarga utilizada
+https://www.datos.gov.co/resource/kgxf-xxbe.json
+
+Universo    : 7.109.704 registros
+Muestra     : 240.000 descargados por muestreo sistematico
+Analiticos  : 119.953 registros tras la limpieza
+
+
+--------------------------------------------------------------------------------
+RESULTADOS DEL MODELO
+--------------------------------------------------------------------------------
+
+Modelo final : HistGradientBoostingClassifier (con class_weight balanceado)
+               dentro de un Pipeline con todo el preprocesamiento
+
+Desempeno sobre el conjunto de prueba (30 % no visto):
+
+    Accuracy        0,7360
+    Precision       0,4064
+    Recall          0,7018
+    F1              0,5147   <- metrica principal
+    ROC-AUC         0,8020
+    PR-AUC          0,5209
+    Bal. Accuracy   0,7231
+    MCC             0,3753
+
+Metas fijadas en la fase 1: F1 >= 0,50 y ROC-AUC >= 0,75. Ambas se cumplen.
+
+
+--------------------------------------------------------------------------------
+ARCHIVOS DEL REPOSITORIO
+--------------------------------------------------------------------------------
+
+app/app.py                                Aplicacion Streamlit
+app/modelo_saber11.joblib                 Modelo serializado (pipeline completo)
+app/requirements.txt                      Dependencias del despliegue
+data/saber11_20224_muestra_cruda.csv      Dataset descargado (sin limpiar)
+descarga_datos.py                         Script de descarga desde la API
+modelos/modelo_saber11.joblib             Modelo serializado
+modelos/metadatos_modelo.json             Ficha tecnica del modelo
+notebooks/proyecto_integrador_saber11.ipynb   Cuaderno CRISP-DM ejecutado
+reportes/reporte_exploratorio_saber11.html    Reporte ydata-profiling
+reportes/diccionario_datos.csv            Diccionario de variables
+reportes/resultados_test.csv              Metricas de todos los modelos
+reportes/hiperparametros_finales.csv      Hiperparametros ajustados
+reportes/predicciones_datos_nuevos.csv    Predicciones sobre perfiles nuevos
+reportes/tablas_formato_entrega.xlsx      Tablas del formato (11 hojas)
+reportes/pantallazo_app_streamlit.png     Evidencia: app desplegada
+reportes/pantallazo_app_prediccion.png    Evidencia: prediccion completa
+README.md                                 Documentacion del proyecto
+requirements.txt                          Dependencias completas
+U4_A1_Entrega_Proyecto_Integrador_Saber11.docx   Documento de entrega
+
+================================================================================
